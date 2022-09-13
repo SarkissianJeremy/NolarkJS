@@ -1,0 +1,49 @@
+<html lang="fr-FR">
+    <head>
+        <title>Simulateur</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="José GIL">
+        <meta name="description" content="Découvrez des casques moto dépassant même les exigences des tests de sécurité. Tous les casques Nolark au meilleur prix et avec en prime la livraison gratuite !">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <link rel="icon" href="favicon.ico">
+    </head>
+    <body>
+        <header>
+            <picture>
+                <source media="(max-width: 576px)" srcset="images/banniere_small.png">
+                <source srcset="images/banniere.png">
+                <img src="images/banniere.png" alt="Nolark : Protect your minds ! Cette bannière montre un 
+                     coucher de soleil avec une femme embrassant un homme réalisant en stoppie sur sa
+                     moto.">
+                <!-- Image basée sur la création originale de ShiftGraphiX sur Pixabay : 
+                    https://pixabay.com/fr/couple-stoppie-sportive-vélomoteur-3156613/ -->
+            </picture>
+            <nav>
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="pages/route.html">Route</a></li>
+                    <li><a href="pages/cross.html">Cross</a></li>
+                    <li><a href="pages/piste.html">Piste</a></li>
+                    <li><a href="pages/enfants.html">Enfants</a></li>
+                    <li><a href="pages/nous-contacter.html">Nous contacter</a></li>
+                </ul>
+            </nav>
+        </header>
+        <form id="form_contact" action="http://gil83.fr/nolark/testforms.php" method="POST">
+        <label>Nombre d'ancienneté: </label> 
+        <input type="number" name="ancien" id="ancien" min="1" max="50">
+        <label>Nombre de casque S20 vendus : </label> 
+        <input type="number" name="nbs20" id="nbs20" min="1" max="1000">
+        <label>Nombre de casque X-Spirit vendus </label> 
+        <input type="number" name="nbx-spirit" id="nbx-spirit" min="1" max="1000">
+        <label>Nombre de casque Multitec vendus </label> 
+        <input type="number" name="nbmultitec" id="nbmultitec" min="1" max="1000">
+        <div id="controles"><input type="button" id="btn_envoyer" name="sub_envoyer" value="Simuler"> 
+            <input type="reset" name="rst_annuler" value="Effacer les réponses"></div>
+            </form>
+    </body>
