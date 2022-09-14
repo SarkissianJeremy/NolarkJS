@@ -4,7 +4,7 @@ const multitec = 180;
 const s20 = 140;
 
 
-
+function remuneration(){
 let nbancien = ParseInt(window.document.querySelector("#ancien").value);
  if (nbancien >= 5) {
      fixe = fixe * 1.03;
@@ -28,4 +28,16 @@ let nbancien = ParseInt(window.document.querySelector("#ancien").value);
      let commultitec = nbmultitec * multitec * 0.04;
      fixe += commultitec;
  }
- else if 
+ else if (nbmultitec >=50){
+     let commultitec = nbmultitec * multitec * 0.06;
+     fixe += commultitec;
+ }
+ else if (nbmultitec <50){
+     let commultitec = nbmultitec * multitec * 0.10;
+     fixe += commultitec;
+ }
+ window.document.querySelector("#form_contact").submit();
+}
+window.addEventListener("load", function(){
+    window.document.querySelector("#btn_envoyer").addEventListener("click", remuneration);
+});
