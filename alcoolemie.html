@@ -1,0 +1,49 @@
+<html lang="fr-FR">
+    <head>
+        <title>Nolark</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.ico">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <script src="js/alcoolemie.js"></script>
+    </head>
+    <body>
+        <header>
+            <picture>
+                <source media="(max-width: 576px)" srcset="images/banniere_small.png">
+                <source srcset="images/banniere.png">
+                <img src="images/banniere.png" alt="Nolark : Protect your minds ! Cette bannière montre un 
+                     coucher de soleil avec une femme embrassant un homme réalisant en stoppie sur sa
+                     moto.">             
+            </picture>
+            <nav>
+                <input type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="pages/route.html">Route</a></li>
+                    <li><a href="pages/cross.html">Cross</a></li>
+                    <li><a href="pages/piste.html">Piste</a></li>
+                    <li><a href="pages/enfants.html">Enfants</a></li>
+                    <li><a href="pages/nous-contacter.html">Nous contacter</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+		<h1>Simulateur d'alcoolémie :</h1>
+		<form><fieldset id="simulation"><p><label for="num_poids">Votre poids :</label>
+                            <input type="number" name="num_poids" id="num_poids" min="0" max="200" value="0" /></p>
+		
+		<fieldset id="sexe">
+                    <legend>Votre sexe : </legend>
+                    <p><input type="radio" name="rd_sexe" value="homme" id="rd_sexehomme" checked="checked"> 
+                        <label for="rd_sexehomme">Homme</label></p>
+                    <p><input type="radio" name="rd_sexe" value="femme" id="rd_sexefemme"> 
+                        <label for="rd_sexefemme">Femme</label></p>
+                </fieldset>
+<p><label for="num_verre">Nombre de verres bus :</label> <input type="number" name="num_verre" id="num_verre" min="0" max="25" value="0"></p>
+        </fieldset></form></section>
+        
+    </body>
+</html>

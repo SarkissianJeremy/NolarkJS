@@ -6,6 +6,7 @@
         <meta name="description" content="Découvrez des casques moto dépassant même les exigences des tests de sécurité. Tous les casques Nolark au meilleur prix et avec en prime la livraison gratuite !">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <script src="JS/remuneration.js"></script>
         <link rel="icon" href="favicon.ico">
     </head>
     <body>
@@ -15,9 +16,7 @@
                 <source srcset="images/banniere.png">
                 <img src="images/banniere.png" alt="Nolark : Protect your minds ! Cette bannière montre un 
                      coucher de soleil avec une femme embrassant un homme réalisant en stoppie sur sa
-                     moto.">
-                <!-- Image basée sur la création originale de ShiftGraphiX sur Pixabay : 
-                    https://pixabay.com/fr/couple-stoppie-sportive-vélomoteur-3156613/ -->
+                     moto.">             
             </picture>
             <nav>
                 <input type="checkbox">
@@ -34,16 +33,18 @@
                 </ul>
             </nav>
         </header>
-        <form id="form_contact" action="http://gil83.fr/nolark/testforms.php" method="POST">
-        <label>Nombre d'ancienneté: </label> 
-        <input type="number" name="ancien" id="ancien" min="1" max="50">
-        <label>Nombre de casque S20 vendus : </label> 
-        <input type="number" name="nbs20" id="nbs20" min="1" max="1000">
-        <label>Nombre de casque X-Spirit vendus </label> 
-        <input type="number" name="nbx-spirit" id="nbx-spirit" min="1" max="1000">
-        <label>Nombre de casque Multitec vendus </label> 
-        <input type="number" name="nbmultitec" id="nbmultitec" min="1" max="1000">
-        <div id="controles"><input type="button" id="btn_envoyer" name="sub_envoyer" value="Simuler"> 
-            <input type="reset" name="rst_annuler" value="Effacer les réponses"></div>
-            </form>
+        <form name="form_contact">
+             <fieldset id="coordo">
+                 <legend>Merci de renseigner les informations demander</legend>
+                    <div><label for="num_ancien">Votre nombre d'années d'ancienneté :</label> <input type="number" name="num_ancien" id="num_ancien" required></div>
+                    <div><label for="num_S20">Nombre de casque S20 vendu :</label> <input type="number" name="num_S20" id="num_S20" required></div>
+                    <div><label for="numX-Sp">Nombre de casque X-Spirite vendu :</label> <input type="number" name="numX-Sp" id="numX-Sp" required></div>
+                    <div><label for="num_Mult">Nombre de casque Multitec vendu :</label> <input type="number" name="num_Mult" id="num_Mult" required ></div>
+		<div><label for="indem_km">Nombre de km parcourus :</label> <input type="number" name="indem_km" id="indem_km" required ></div>
+             </fieldset>
+            <div id="controles"><input type="button" id="remuneration" name="remuneration" value="Démarrer simulation"> <input type="reset" name="rst_annuler" value="Effacer les réponses"></div>
+		<br>
+			<div>Votre remuneration sera de : <span id="resultat_remun"></span></div>
+	</form>
+            
     </body>
